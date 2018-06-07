@@ -1,0 +1,13 @@
+<div class="row">
+  <div class="container">
+    <div class="ip-form text-center">
+      {{#link-to 'test_one'}}
+        <a href="##">Go back</a>
+      {{/link-to}}
+      <h3>List of countries</h3>
+      {{#each model as |address|}}
+        <p>{{address.ip}} - this ip address related to {{address.country}}</p>
+      {{/each}}
+    </div>
+  </div>
+</div>

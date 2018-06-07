@@ -1,0 +1,21 @@
+.ip-form {
+  margin-top: 30%;
+  .add-ip {
+    margin-left: 20px;
+    cursor: pointer;
+  }
+  .address-row {
+    position: relative;
+    .rm-ip {
+      position: absolute;
+      margin-left: 20px;
+      cursor: pointer;
+      top: 35%;
+      right: 6%;
+    }
+    .address-input {
+      margin: 10px 0;
+      width: 90%;
+    }
+  }
+}

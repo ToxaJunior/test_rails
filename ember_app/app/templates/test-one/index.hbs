@@ -1,0 +1,22 @@
+<div class="row">
+  <div class="container">
+    <div class="ip-form text-center">
+      <form>
+        <div class="form-group">
+          <label for="exampleInputPassword1">Your ip addresses</label>
+          <i class="fas fa-plus-circle add-ip" {{action 'addAddress'}}></i>
+          {{#each model as |address|}}
+            <div class="row address-row">
+              {{input autocomplete="off"
+                      value=address.ip
+                      class="form-control address-input"
+                      placeholder='Enter ip address'}}
+              <i class="fas fa-minus-circle rm-ip" {{action 'removeAddress' address}}></i>
+            </div>
+          {{/each}}
+        </div>
+        <button class="btn btn-primary" {{action 'submit' model}}>Submit</button>
+      </form>
+    </div>
+  </div>
+</div>
