@@ -1,0 +1,13 @@
+<h1>New role</h1>
+<% flash.each do |key, value| %>
+    <div class="alert alert-<%= key %>"><%= value %></div>
+    <%= link_to 'Sign out', destroy_user_session_path, :method => :delete %>
+<% end %>
+<%= form_for @role, url: roles_path, local: true do |form| %>
+    <p>
+      <%= form.text_field :name %>
+    </p>
+    <p>
+      <%= form.submit %>
+    </p>
+<% end %>
